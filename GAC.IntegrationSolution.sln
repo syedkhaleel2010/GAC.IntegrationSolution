@@ -1,0 +1,52 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.12.35527.113 d17.12
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GAC.IntegrationSolution", "GAC.IntegrationSolution\GAC.IntegrationSolution.csproj", "{62FE4CBE-9508-45AE-B0D1-EE4059A61E31}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GAC.Integration.Scheduler", "GAC.Integration.Scheduler\GAC.Integration.Scheduler.csproj", "{FE88652D-BC4F-4DD7-8FD5-E57396C2B0DC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GAC.Integration.FileProcessor", "GAC.Integration.FileProcessor\GAC.Integration.FileProcessor.csproj", "{28CB42CD-8CE1-4159-B231-AEBBACBD37B7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GAC.Integration.Domain", "GAC.Integration.Domain\GAC.Integration.Domain.csproj", "{66595205-4431-429E-9F09-4C139BACEDD7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GAC.Integration.Infrastructure", "GAC.Integration.Infrastructure\GAC.Integration.Infrastructure.csproj", "{9162A454-DE62-4A92-9A24-51F71CE36685}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GAC.Integration.Tests", "GAC.Integration.Tests\GAC.Integration.Tests.csproj", "{FE57B560-AB31-426D-A0D2-39C0621C12D3}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{62FE4CBE-9508-45AE-B0D1-EE4059A61E31}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{62FE4CBE-9508-45AE-B0D1-EE4059A61E31}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{62FE4CBE-9508-45AE-B0D1-EE4059A61E31}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{62FE4CBE-9508-45AE-B0D1-EE4059A61E31}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FE88652D-BC4F-4DD7-8FD5-E57396C2B0DC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FE88652D-BC4F-4DD7-8FD5-E57396C2B0DC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FE88652D-BC4F-4DD7-8FD5-E57396C2B0DC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FE88652D-BC4F-4DD7-8FD5-E57396C2B0DC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{28CB42CD-8CE1-4159-B231-AEBBACBD37B7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{28CB42CD-8CE1-4159-B231-AEBBACBD37B7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{28CB42CD-8CE1-4159-B231-AEBBACBD37B7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{28CB42CD-8CE1-4159-B231-AEBBACBD37B7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{66595205-4431-429E-9F09-4C139BACEDD7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{66595205-4431-429E-9F09-4C139BACEDD7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{66595205-4431-429E-9F09-4C139BACEDD7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{66595205-4431-429E-9F09-4C139BACEDD7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9162A454-DE62-4A92-9A24-51F71CE36685}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9162A454-DE62-4A92-9A24-51F71CE36685}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9162A454-DE62-4A92-9A24-51F71CE36685}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9162A454-DE62-4A92-9A24-51F71CE36685}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FE57B560-AB31-426D-A0D2-39C0621C12D3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FE57B560-AB31-426D-A0D2-39C0621C12D3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FE57B560-AB31-426D-A0D2-39C0621C12D3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FE57B560-AB31-426D-A0D2-39C0621C12D3}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
