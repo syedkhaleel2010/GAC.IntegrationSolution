@@ -1,12 +1,9 @@
-﻿using System.IO;
-using System.Threading.Tasks;
-using Xunit;
-using Moq;
-using Microsoft.Extensions.Logging;
-using Microsoft.Extensions.Configuration;
+﻿using GAC.Integration.Infrastructure.ApiClients;
 using GAC.Integration.Scheduler.Services;
-using GAC.Integration.Infrastructure.ApiClients;
-using System.Collections.Generic;
+using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.Logging;
+using Moq;
+using Xunit;
 
 namespace GAC.Integration.Tests
 {
