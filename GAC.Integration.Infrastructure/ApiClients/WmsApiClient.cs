@@ -36,7 +36,7 @@ namespace GAC.Integration.Infrastructure.ApiClients
         {
             return await _retryPolicy.ExecuteAsync(async () =>
             {
-                var response = await _httpClient.PostAsJsonAsync("/api/purchaseorders", poDto);
+                var response = await _httpClient.PostAsJsonAsync("PurchaseOrder", poDto);
 
                 if (response.IsSuccessStatusCode)
                 {

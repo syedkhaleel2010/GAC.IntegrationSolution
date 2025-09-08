@@ -18,6 +18,8 @@ builder.Services.AddHttpClient<WmsApiClient>(client =>
 
 // Register Background Service
 builder.Services.AddHostedService<FilePollingService>();
+
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

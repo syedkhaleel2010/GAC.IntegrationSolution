@@ -1,32 +1,20 @@
 ﻿using System.Xml.Linq;
+using System.Xml.Serialization;
 using GAC.Integration.Domain.Entities;
 
 namespace GAC.Integration.FileProcessor.Parsers
 {
     public static class XmlParser
     {
-        public static PurchaseOrder ParsePurchaseOrder(string xmlContent)
+        public static PurchaseOrder ParsePurchaseOrder(string xmlFilePath)
         {
-            var xDoc = XDocument.Parse(xmlContent);
-
-            var po = new PurchaseOrder
+            XmlSerializer serializer = new XmlSerializer(typeof(PurchaseOrder));
+            using (FileStream fs = new FileStream(xmlFilePath, FileMode.Open))
             {
-                OrderId = xDoc.Root?.Element("LegacyOrderId")?.Value,
-                ProcessingDate = DateTime.Parse(xDoc.Root?.Element("OrderDate")?.Value ?? DateTime.UtcNow.ToString()),
-                CustomerId = xDoc.Root?.Element("CustID")?.Value
-            };
-
-            foreach (var item in xDoc.Descendants("Item"))
-            {
-                po.Items.Add(new PurchaseOrderItem
-                {
-                    ProductCode = item.Element("LegacyProductCode")?.Value,
-                    Quantity = int.Parse(item.Element("Qty")?.Value ?? "0")
-                });
+                return (PurchaseOrder)serializer.Deserialize(fs);
             }
-
-            return po;
         }
+
     }
 }
 

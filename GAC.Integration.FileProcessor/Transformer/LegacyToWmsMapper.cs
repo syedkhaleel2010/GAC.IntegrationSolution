@@ -8,12 +8,12 @@ namespace GAC.Integration.FileProcessor.Transformers
         {
             return new
             {
-                orderId = po.OrderId,
+                orderId = po.ExternalOrderID,
                 processingDate = po.ProcessingDate,
-                customer = po.CustomerId,
-                products = po.Items.Select(i => new
+                customer = po.CustomerID,
+                products = po.PurchaseOrderLineDto.Select(i => new
                 {
-                    code = i.ProductCode,
+                    code = i.ProductID,
                     qty = i.Quantity
                 }).ToList()
             };

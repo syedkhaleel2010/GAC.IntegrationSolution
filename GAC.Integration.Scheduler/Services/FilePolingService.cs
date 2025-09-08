@@ -59,18 +59,15 @@ namespace GAC.Integration.Scheduler.Services
             {
                 try
                 {
-                    var content = await File.ReadAllTextAsync(file);
+                    //var content = await File.ReadAllTextAsync(file);
 
                     // 1. Parse XML → Domain Object
-                    var po = XmlParser.ParsePurchaseOrder(content);
-
-                    // 2. Transform → WMS Schema
-                    var poDto = LegacyToWmsMapper.MapPurchaseOrderToWms(po);
+                    var po = XmlParser.ParsePurchaseOrder(file);
 
                     // 3. Push to WMS API
-                    var success = await _wmsApiClient.PushPurchaseOrderAsync(poDto);
+                    var success = await _wmsApiClient.PushPurchaseOrderAsync(po);
 
-                    if (success)
+                    if (success.StatusCode ==System.Net.HttpStatusCode.OK)
                     {
                         var archivePath = Path.Combine(_archiveDirectory, Path.GetFileName(file));
                         Directory.CreateDirectory(_archiveDirectory);

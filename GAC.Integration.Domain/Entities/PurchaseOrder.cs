@@ -1,23 +1,32 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System;
+using System.Collections.Generic;
+using System.Xml.Serialization;
 
 namespace GAC.Integration.Domain.Entities
 {
+    [XmlRoot("PurchaseOrder")]
     public class PurchaseOrder
     {
-        public string OrderId { get; set; }
+        public string ExternalOrderID { get; set; }
         public DateTime ProcessingDate { get; set; }
-        public string CustomerId { get; set; }
-        public List<PurchaseOrderItem> Items { get; set; } = new();
+        public Guid CustomerID { get; set; }
+
+        [XmlArray("PurchaseOrderLines")]
+        [XmlArrayItem("LineItem")]
+        public List<LineItem> PurchaseOrderLineDto { get; set; }
     }
 
-    public class PurchaseOrderItem
+    public class LineItem
     {
-        public string ProductCode { get; set; }
+        public Guid PurchaseOrderID { get; set; }
+        public Guid ProductID { get; set; }
         public int Quantity { get; set; }
     }
+
+
+
+     
 }
 
